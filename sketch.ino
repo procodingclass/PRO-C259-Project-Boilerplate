@@ -45,18 +45,8 @@ void train(){
 void set_new_password(){
   Serial.println("Enter a new password. Press # when password set : ");
   while (true){
-    key = keypad.getKey();
-    if (key){
-      if (key  ==  '#'){
-        Serial.println();
-        Serial.println("Password set");
-        break;
-      }
-      else{
-        user_password.concat(key);
-        Serial.print('@');
-      }
-    }
+
+    //  write an algorithm to set a new password
   }
 }
 
@@ -64,24 +54,8 @@ void check_password(){
   delay(3000);
   Serial.println("Enter Password. Press # when password entered : ");
   while (true){
-    key = keypad.getKey();
-    if (key){
-      if (key  ==  '#'){
-        if (input_password  ==  user_password){
-          Serial.println();
-          Serial.println("Access granted");
-          break;
-        }
-        else{
-          Serial.println();
-          Serial.println("Access denied, try again");
-          input_password = "";
-        }
-      }
-      else{
-        input_password.concat(key);
-        Serial.print('@');
-      }
-    }
+    
+    //  write an algorithm to authenticate password
+    
   }
 }
